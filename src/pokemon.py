@@ -60,6 +60,7 @@ class Pokeball:
     
     def __init__(self, caught_pokemon=None):
         self.caught_pokemon = caught_pokemon
+       
 
     #Method - Takes Pokemon as object
 
@@ -69,7 +70,12 @@ class Pokeball:
         else:
             self.caught_pokemon = caught_pokemon
 
-
+    def is_pokeball_empty(self):
+        
+        if self.caught_pokemon == None:
+            return True     
+        else: 
+            return False
 
 
     

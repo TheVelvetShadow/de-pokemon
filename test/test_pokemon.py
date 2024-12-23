@@ -83,3 +83,11 @@ def test_pokeball_catch_method_exception_if_full():
    
     with pytest.raises(Exception, match="Pokeball already has a Pokemon stored in it!"):
          test_pokeball.catch(squirtle)
+
+def test_is_pokeball_empty():
+    test_catch = Pokeball()
+    assert test_catch.is_pokeball_empty() == True
+
+    charizard = Water("Charizard", 10, 6, "Fireball")
+    test_catch = Pokeball(charizard) 
+    assert test_catch.is_pokeball_empty() == False   
