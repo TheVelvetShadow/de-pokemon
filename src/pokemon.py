@@ -57,8 +57,21 @@ class Normal(Pokemon):
         self.weak_against = None
 
 class Pokeball:
-    def __init__(self, another_pokemon=None):
-        self.stored = another_pokemon
+    
+    def __init__(self, caught_pokemon=None):
+        self.caught_pokemon = caught_pokemon
+
+    #Method - Takes Pokemon as object
+
+    def catch(self, caught_pokemon):
+        if self.caught_pokemon:
+            raise Exception("Pokeball already has a Pokemon stored in it!")
+        else:
+            self.caught_pokemon = caught_pokemon
+
+
+
+
     
 
 
